@@ -16,4 +16,10 @@ describe('Breed') do
     breed.save
     expect(Breed.all[-1].==(breed)).to(eq(true))
   end
+  it "Finds one breed" do
+    breed = Breed.new({:name => 'German Shephard', :type => 'Dog', :description => 'Umbwa Kali!!!'})
+    breed.save
+    breed_array = Breed.all
+    expect(Breed.find(breed_array[-1].id)).to(eq([breed]))
+  end
 end
