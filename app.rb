@@ -6,4 +6,4 @@ require "./lib//breed"
 require "./lib/customer"
 also_reload("lib/**/*.rb")
 
-DB=PG.connect({:dbname=>"animal_shelter"})
+DB=PG.connect({:dbname => "animal_shelter"})
